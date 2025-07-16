@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Hero.css'
 
 const images = [
@@ -16,6 +16,13 @@ export const Hero = () => {
   const nextSlide = () => {
     setCurrent(current === images.length - 1 ? 0 : current + 1)
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(current => (current === images.length - 1 ? 0 : current + 1))
+    }, 3000) // Change slide every 3 seconds
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className='hero-container'>
