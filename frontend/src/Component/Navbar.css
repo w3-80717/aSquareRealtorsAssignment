@@ -1,0 +1,23 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px; /* Adjust gap between container and container2 */
+    padding: 0 24px;
+    border-radius: 3px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* Gap between NEWSROOM, CONTACT, and search icon */
+}
