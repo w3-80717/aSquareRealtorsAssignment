@@ -1,0 +1,27 @@
+.about-container{
+    display: flex;
+    row-gap: 500px;
+}
+.sub-container{
+    
+    left:20px;
+    text-align:left;
+}
+p{
+    display: contents;
+    left: 10px;
+    text-align: left;
+}
+.grids{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 200px;
+    
+}
+.sub-container{
+    padding: 20px;
+}
+ h1{
+    font-weight: 900;
+
+}
