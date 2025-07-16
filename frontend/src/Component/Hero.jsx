@@ -1,50 +1,53 @@
-import React, { useState, useEffect } from 'react'
-import './Hero.css'
+// Hero.js
+import React, { useState, useEffect } from 'react';
+import './Hero.css';
 
+// YOUR ORIGINAL CODE - UNCHANGED
 const images = [
-  { src: './banner-1.jpg', alt: 'banner 1', text: "Preferred partner of the world’s largest automotive OEMs" },
-  { src: './banner-2.jpg', alt: 'banner 2', text: "Quality First: Advik Hitech's Commitment to Exceptional Manufacturing and Service" }
-]
+    { src: './banner-1.jpg', alt: 'banner 1', text: "Preferred partner of the world’s largest automotive OEMs" },
+    { src: './banner-2.jpg', alt: 'banner 2', text: "Quality First: Advik Hitech's Commitment to Exceptional Manufacturing and Service" }
+];
 
 export const Hero = () => {
-  const [current, setCurrent] = useState(0)
+    const [current, setCurrent] = useState(0);
+    const prevSlide = () => setCurrent(current === 0 ? images.length - 1 : current - 1);
+    const nextSlide = () => setCurrent(current === images.length - 1 ? 0 : current + 1);
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? images.length - 1 : current - 1)
-  }
+    useEffect(() => {
+        const interval = setInterval(nextSlide, 3000);
+        return () => clearInterval(interval);
+    }, [current]);
 
-  const nextSlide = () => {
-    setCurrent(current === images.length - 1 ? 0 : current + 1)
-  }
+    return (
+        <div className='hero-container'>
+            <img className='hero-img' src={images[current].src} alt={images[current].alt} key={current}/>
+            
+            <div className='hero-content'>
+                <div className="carousel-indicators">
+                    {images.map((_, index) => (
+                        <div
+                            key={index}
+                            className={`indicator ${current === index ? 'active' : ''}`}
+                            onClick={() => setCurrent(index)}
+                        ></div>
+                    ))}
+                </div>
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent(current => (current === images.length - 1 ? 0 : current + 1))
-    }, 3000) // Change slide every 3 seconds
-    return () => clearInterval(interval)
-  }, [])
+                <h2>{images[current].text}</h2>
 
-  return (
-    <div className='hero-container'>
-      <img className='hero-img' src={images[current].src} alt={images[current].alt} />
-      <div className='hero-content'>
-        <h2>{images[current].text}</h2>
-        <a href=''>
-          <button>EXPLORE</button>
-        </a>
-      </div>
-      <span className='carousel-icon'>
-        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10" fill="#007bff"/>
-          <text x="12" y="16" textAnchor="middle" fontSize="12" fill="#fff">A</text>
-        </svg>
-      </span>
-      <button className='arrow left-arrow' onClick={prevSlide}>
-        &#8592;
-      </button>
-      <button className='arrow right-arrow' onClick={nextSlide}>
-        &#8594;
-      </button>
-    </div>
-  )
-}
+                {/* UPDATED: The button now uses the ::before/::after strategy */ }
+                <a href='#' className='explore-button'>
+                    <span className="explore-text">EXPLORE</span>
+                </a>
+            </div>
+
+            {/* YOUR ORIGINAL ARROW BUTTONS - UNCHANGED */}
+            <button className='arrow left-arrow' onClick={prevSlide}>
+                ←
+            </button>
+            <button className='arrow right-arrow' onClick={nextSlide}>
+                →
+            </button>
+        </div>
+    );
+};
