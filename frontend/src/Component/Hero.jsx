@@ -1,17 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Hero.css'
-export const Hero = () => {
-  return (
 
+const images = [
+  { src: './banner-1.jpg', alt: 'banner 1' },
+  { src: './banner-2.jpg', alt: 'banner 2' }
+  
+]
+
+export const Hero = () => {
+  const [current, setCurrent] = useState(0)
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? images.length - 1 : current - 1)
+  }
+
+  const nextSlide = () => {
+    setCurrent(current === images.length - 1 ? 0 : current + 1)
+  }
+
+  return (
     <div className='hero-container'>
-        <img  className='hero-img' src='./banner-1.jpg' alt='banner'/>
-        <div className='hero-content'>
+      <img className='hero-img' src={images[current].src} alt={images[current].alt} />
+      <div className='hero-content'>
         <h2>Preferred partner of the world’s largest automotive OEMs</h2>
         <a href=''>
-            <button>EXPLORE</button>
+          <button>EXPLORE</button>
         </a>
-        </div> 
+      </div>
+      <span className='carousel-icon'>
+        {/* Example icon, you can use any SVG or image */}
+        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" fill="#007bff"/>
+          <text x="12" y="16" textAnchor="middle" fontSize="12" fill="#fff">A</text>
+        </svg>
+      </span>
+      <button className='arrow left-arrow' onClick={prevSlide}>
+        &#8592;
+      </button>
+      <button className='arrow right-arrow' onClick={nextSlide}>
+        &#8594;
+      </button>
     </div>
-
   )
 }

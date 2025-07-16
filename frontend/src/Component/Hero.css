@@ -33,3 +33,25 @@
     background-color: red;
     color: #fff;
 }
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    opacity: 5;
+    background: none;
+    color: #111010;
+    border: none;
+    font-size: 5rem
+}
+.left-arrow{
+    left: 30px;
+}
+.right-arrow{
+    right: -60px;
+}
+.carousel-icon{
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+}
