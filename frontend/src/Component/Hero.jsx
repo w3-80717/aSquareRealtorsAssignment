@@ -43,7 +43,7 @@ export const Hero = () => {
 
             {/* YOUR ORIGINAL ARROW BUTTONS - UNCHANGED */}
             <button className='arrow left-arrow' onClick={prevSlide}>
-                ←
+              &#8592;
             </button>
             <button className='arrow right-arrow' onClick={nextSlide}>
                 →
