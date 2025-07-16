@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import './Hero.css'
 
 const images = [
-  { src: './banner-1.jpg', alt: 'banner 1' },
-  { src: './banner-2.jpg', alt: 'banner 2' }
-  
+  { src: './banner-1.jpg', alt: 'banner 1', text: "Preferred partner of the world’s largest automotive OEMs" },
+  { src: './banner-2.jpg', alt: 'banner 2', text: "Quality First: Advik Hitech's Commitment to Exceptional Manufacturing and Service" }
 ]
 
 export const Hero = () => {
@@ -22,13 +21,12 @@ export const Hero = () => {
     <div className='hero-container'>
       <img className='hero-img' src={images[current].src} alt={images[current].alt} />
       <div className='hero-content'>
-        <h2>Preferred partner of the world’s largest automotive OEMs</h2>
+        <h2>{images[current].text}</h2>
         <a href=''>
           <button>EXPLORE</button>
         </a>
       </div>
       <span className='carousel-icon'>
-        {/* Example icon, you can use any SVG or image */}
         <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="10" fill="#007bff"/>
           <text x="12" y="16" textAnchor="middle" fontSize="12" fill="#fff">A</text>
