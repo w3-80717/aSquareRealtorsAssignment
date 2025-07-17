@@ -3,7 +3,7 @@
     gap: 40px;
     align-items: flex-start;
     padding: 40px 0;
-    background-color: #e8e8e8;
+    background-color: #f5f5f5;
     
 }
 /* .sub-container{
@@ -64,5 +64,114 @@ hr{
     }
     .grids {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+ /* my code */
+/* .main-features{
+    text-align: center;
+     border: 5px solid gray;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+   padding: 50px 180px 40px 40px;
+  
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+    font-weight: 400; 
+    margin-left: auto;
+    margin-right: auto;
+
+} 
+
+/* .main-features{
+    text-align: center;
+    max-width: 1280px;
+    display: flex;
+     margin-left: auto;
+     margin-right: auto;
+     position: relative;
+} 
+.features{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    
+}
+.feature{
+    display: flex;
+} */
+
+/* Copilot */
+
+.features-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 50px 0;
+  
+    background: linear-gradient(to bottom, #f5f5f5 50%, #fff 50% );
+    
+}
+
+
+
+
+
+.side-img {
+    width: 90px;
+    height: auto;
+   
+}
+
+.left-img {
+    margin-right: 20px;
+     margin-top: -550px;
+}
+
+.right-img {
+    margin-left: 20px;
+}
+
+.features{
+        display: grid;
+          grid-template-rows: repeat(3, 1fr); /* 3 rows, each taking equal height */
+        grid-template-columns: 1fr 1fr; 
+        grid-auto-flow: column;
+        height: 300px;
+        margin-left: -30px;
+    
+}
+.feature{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+.feature img{
+    width: 50px;
+}
+.main-features {
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.12);
+    padding: 50px 40px 40px 40px;
+    border-radius: 12px;
+    min-width: 350px;
+    max-width: 700px;
+    margin: 0 20px;
+}
+
+@media (max-width: 900px) {
+    .features-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .main-features {
+        min-width: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+    .side-img {
+        margin: 0;
     }
 }
