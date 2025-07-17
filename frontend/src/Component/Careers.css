@@ -83,7 +83,7 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    
+    width: 300px;
     background-color: #fff;
     color: #E60000;
     padding: 18px 35px;
