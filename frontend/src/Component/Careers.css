@@ -4,7 +4,7 @@
     justify-content: center;
    
     padding: 40px 0;
-    background: linear-gradient(to bottom, #f5f5f5 50%,#fff 50%);
+   
     content: '';
    
     height: 100%;
@@ -144,6 +144,7 @@
 .career-container .left {
     flex: 1;
     max-width: 600px;
+    height: 320px;
 }
 
 .career-container .left::after {
