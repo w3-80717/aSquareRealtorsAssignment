@@ -67,8 +67,10 @@ function About() {
                             <p>Operate at economies of scale to meet customer challenges in quality and cost</p>
                         </div>
                     </div>
+                        <img src='home_usp_img.svg' alt='machine' className="usp-overlap-img"/>
+
                 </div>
-                <img src='home_usp_img.svg' alt='machine' className="side-img right-img"/>
+               
             </div>
         </div>
 

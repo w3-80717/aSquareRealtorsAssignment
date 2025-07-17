@@ -159,8 +159,36 @@ hr{
     min-width: 350px;
     max-width: 700px;
     margin: 0 20px;
+     position: relative;
+    overflow: visible; /* allow image to overflow */
+}
+.main-features h1{
+    display: flex;
+     align-items: flex-start;
 }
 
+.usp-overlap-img {
+    position: absolute;
+    top: 50%;
+    right: -170px; /* negative value to push half outside */
+    transform: translateY(-50%);
+    width: 250px; /* adjust as needed */
+    height: 550px;
+   
+   
+    
+   
+}
+
+@media (max-width: 900px) {
+    .usp-overlap-img {
+        position: static;
+        transform: none;
+        margin: 24px auto 0 auto;
+        display: block;
+        right: auto;
+    }
+}
 @media (max-width: 900px) {
     .features-row {
         flex-direction: column;
