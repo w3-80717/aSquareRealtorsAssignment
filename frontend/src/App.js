@@ -2,6 +2,7 @@
 import './App.css';
 import About from './Component/About';
 import Careers from './Component/Careers';
+import GroupPresence from './Component/GroupPresence';
 import { Hero } from './Component/Hero';
 import MDMessage from './Component/MDMessage';
 import Navbar from './Component/Navbar';
@@ -17,6 +18,7 @@ function App() {
      <Careers/>
      <Newsroom/>
      <MDMessage/>
+     <GroupPresence/>
     </div>
   );
 }
