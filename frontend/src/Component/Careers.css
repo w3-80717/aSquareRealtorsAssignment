@@ -1,0 +1,184 @@
+.career-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    padding: 40px 0;
+    background: linear-gradient(to bottom, #f5f5f5 50%,#fff 50%);
+    content: '';
+   
+    height: 100%;
+    width: 100%;
+   
+     top: 0;
+    bottom: 100%;
+    
+     
+}
+
+.left {
+    flex: 2;
+    min-width: 350px;
+    max-width: 600px;
+    padding: 32px 40px;
+   
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.12);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-style: normal;
+}
+
+.left h1 {
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.left p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: #fff;
+}
+.left button {
+    font-size: 1.1rem;
+    padding: 12px 32px;
+    background-color: #fff;
+    color: #eb3f3f;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+   
+}
+.right img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 900px) {
+    .career-container {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 0;
+    }
+    .left, .right {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .right img {
+        max-width: 100%;
+    }
+}
+/* --- The Final, Correctly Animated Button --- */
+.explore-buttons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    
+    background-color: #fff;
+    color: #E60000;
+    padding: 18px 35px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.explore-text {
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.explore-buttons::before,
+.explore-buttons::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.4s ease;
+}
+
+.explore-buttons::before {
+    content: '▶';
+    left: 15px;
+    transform: translateY(-50%) translateX(-300%);
+}
+
+.explore-buttons::after {
+    content: '▶';
+    right: 15px;
+    transform: translateY(-50%) translateX(0);
+}
+
+.explore-buttons:hover .explore-text {
+    transform: translateX(15px);
+}
+.explore-buttons:hover::before {
+    transform: translateY(-50%) translateX(0);
+}
+.explore-buttons:hover::after {
+    transform: translateY(-50%) translateX(300%);
+}
+
+.left button:hover {
+    background: #fff;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.career-container .left *{
+
+    z-index: 2;
+}
+.career-container .left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.career-container .left::after {
+    content: "";
+    background-color:#eb3f3f;
+    transform: skew(-15deg, 0);
+    height:380px;
+    opacity: 1;
+    position: absolute;
+    width: 900px;
+    z-index: 1;
+    left: -100px;
+}
+
+.career-container .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.career-container .right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 900px) {
+    .career-container {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 0;
+    }
+    .career-container .right,
+    .career-container .left {
+        max-width: 100%;
+    }
+}
