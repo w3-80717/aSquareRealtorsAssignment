@@ -3,6 +3,8 @@
     gap: 40px;
     align-items: flex-start;
     padding: 40px 0;
+    background-color: #e8e8e8;
+    
 }
 /* .sub-container{
     flex: 2;
@@ -13,7 +15,7 @@
 .sub-container {
     margin-right: 50px;
     width:400px;
-    
+    margin-top: -20px;
 }
 
 .sub-container p {
@@ -21,6 +23,12 @@
     line-height: 1.6;
     margin-bottom: 20px;
    
+   
+}
+hr{
+    margin-top: -2px;
+    color: #e8e8e8;
+
 }
 /* p{
     display: contents;
@@ -41,6 +49,13 @@
  h1{
     font-weight: 900;
 
+}
+.sub-grid p{
+    color: #54595F;
+    text-align: center;
+    font: 17px "Open Sans", sans-serif;
+    margin: 5px 0px 0px;
+    
 }
 
 @media (max-width: 900px) {

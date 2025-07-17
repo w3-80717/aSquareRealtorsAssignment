@@ -2,6 +2,7 @@ import React from 'react'
 import './About.css'
 function About() {
     return (
+        <div className='Main'>
         <div className='about-container'>
             <div className='sub-container'>
                 <h1>ABOUT US</h1>
@@ -13,24 +14,58 @@ function About() {
                 </a>
             </div>
             <div className='grids'>
-           <div className='sub-grid'> 
-            <h1>120 +</h1>
-            <p>Million USD Annual Turnover</p>
-           </div>
-            <div className='sub-grid'> 
-            <h1>120 +</h1>
-            <p>Million USD Annual Turnover</p>
-           </div>
-            <div className='sub-grid'> 
-            <h1>120 +</h1>
-            <p align="left">Million USD Annual Turnover</p>
-           </div>
-            <div className='sub-grid'> 
-            <h1>120 +</h1>
-            <p>Million USD Annual Turnover</p>
-           </div>
-           </div>
+                <div className='sub-grid'>
+                    <h1>120 +</h1>
+                    <p>Million USD Annual Turnover</p>
+                    <hr />
+                </div>
+                <div className='sub-grid'>
+                    <h1>120 +</h1>
+                    <p>Million USD Annual Turnover</p>
+                    <hr />
+                </div>
+                <div className='sub-grid'>
+                    <h1>120 +</h1>
+                    <p align="left">Million USD Annual Turnover</p>
+                    <hr />
+                </div>
+                <div className='sub-grid'>
+                    <h1>120 +</h1>
+                    <p>Million USD Annual Turnover</p>
+                    <hr />
+                </div>
+            </div>
         </div>
+        <div className='features'>
+            <h1>FEATURES & USP</h1>
+            <div className='feature'>
+                <img src='' alt=''/>
+                <p></p>
+            </div>
+            <div className='feature'>
+                <img src='' alt=''/>
+                <p></p>
+            </div>
+            <div className='feature'>
+                <img src='' alt=''/>
+                <p></p>
+            </div>
+            <div className='feature'>
+                <img src='' alt=''/>
+                <p></p>
+            </div>
+            <div className='feature'>
+                <img src='' alt=''/>
+                <p></p>
+            </div>
+            <div className='feature'>
+                <img src='' alt=''/>
+                <p></p>
+            </div>
+
+        </div>
+        </div>
+
     )
 }
 
