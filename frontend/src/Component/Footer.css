@@ -63,14 +63,16 @@
 }
 
 .footers {
-    min-width: 220px;
-    max-width: 260px;
+    width: 232px;
     margin-bottom: 0;
+    font-size: medium;
 }
 
 .footers h3, .footers h4, .footers h5 {
     margin: 0 0 6px 0;
     color: black;
+    font-family: "Open Sans", Sans-serif;
+    font-weight: 600;
 }
 
 .footers p {

@@ -53,32 +53,31 @@ function Footer() {
                         <p>info@advik.co.in</p>
                     </div>
                     <div className='footers'>
-                        <h3>GERMANY</h3>
-                        <h4>ADVIK GERMANY GMBH</h4>
-                        <h5>EUROPE OFFICE</h5>
-                        <p>Example Strasse 12, 12345 Berlin, Germany</p>
-                        <p>contact@advik-germany.de</p>
+                        <h3>INDIA</h3>
+                        <h4>ADVIK HI- TECH PVT. LTD.</h4>
+                        <h5>REGISTERED OFFICE</h5>
+                        <p>Gat No.357/99, Chakan-Talegaon Road Kharabwadi, Tal-Khed, Chakan Pune- 410501, India.</p>
+                        <p>info@advik.co.in</p>
                     </div>
                     <div className='footers'>
-                        <h3>USA</h3>
-                        <h4>ADVIK USA INC.</h4>
-                        <h5>AMERICA OFFICE</h5>
-                        <p>1234 Main Street, Suite 100, Detroit, MI 48201, USA</p>
-                        <p>usa@advik.com</p>
+                        <h3>PT ADVIK INDONESIA</h3>
+                        
+                        <p>Jalan Sungkai, Block F26 No.19M Delta Silicon 3, Lippo Cikarang Bekasi - 17530 Indonesia.</p>
+                        
                     </div>
                     <div className='footers'>
-                        <h3>USA</h3>
-                        <h4>ADVIK USA INC.</h4>
-                        <h5>AMERICA OFFICE</h5>
-                        <p>1234 Main Street, Suite 100, Detroit, MI 48201, USA</p>
-                        <p>usa@advik.com</p>
+                        <h3>ADVIK TECHNOLOGIES LTD</h3>
+                        
+                        <p>61 Water Street, Birmingham, B3 1HN,  UK</p>
+                        
                     </div>
                     <div className='footers'>
-                        <h3>USA</h3>
-                        <h4>ADVIK USA INC.</h4>
-                        <h5>AMERICA OFFICE</h5>
-                        <p>1234 Main Street, Suite 100, Detroit, MI 48201, USA</p>
-                        <p>usa@advik.com</p>
+                        <h3>POWERSPORTS MTG GMBH</h3>
+                        
+                        <p>Ruebteile 1 <br/>
+                         72574 Bad Urach<br/>
+                          Germany</p>
+                        
                     </div>
                     
                 </div>
