@@ -9,6 +9,7 @@ import MDMessage from './Component/MDMessage';
 import Navbar from './Component/Navbar';
 import Newsroom from './Component/Newsroom';
 import Sustainability from './Component/Sustainability';
+import TechnologyCarousel from './Component/TechnologyCarousel';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
      <MDMessage/>
      <GroupPresence/>
      <Sustainability/>
+     <TechnologyCarousel/>
      <Footer/>
     </div>
   );
