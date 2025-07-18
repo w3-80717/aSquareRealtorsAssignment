@@ -8,6 +8,7 @@ import { Hero } from './Component/Hero';
 import MDMessage from './Component/MDMessage';
 import Navbar from './Component/Navbar';
 import Newsroom from './Component/Newsroom';
+import Sustainability from './Component/Sustainability';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
      <Newsroom/>
      <MDMessage/>
      <GroupPresence/>
+     <Sustainability/>
      <Footer/>
     </div>
   );
