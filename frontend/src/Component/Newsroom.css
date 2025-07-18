@@ -21,7 +21,6 @@
     background: #e60000;
     color: #fff;
     border: none;
-    border-radius: 6px;
     font-size: 1.2rem;
     font-weight: 700;
     padding: 12px 40px;
@@ -32,10 +31,6 @@
     outline: none;
 }
 
-.explore-button:hover {
-    background: #b30000;
-    transform: translateY(-2px) scale(1.03);
-}
 
 .card-container {
     display: flex;
@@ -56,7 +51,7 @@
 }
 
 .sub-card img {
-    width: 384px;
+    width: 350px;
     height: 271px;
     object-fit: cover;
     

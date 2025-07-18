@@ -13,7 +13,6 @@
     gap: 40px;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 28px;
 }
 
 .footer-sub {
@@ -59,7 +58,7 @@
 .footer-addresses {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    justify-content: space-around;
   
 }
 
