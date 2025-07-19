@@ -1,0 +1,256 @@
+/* --- Global Styles & Fonts --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+}
+
+p.lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- Navbar --- */
+.navbar-nav .nav-link {
+    font-weight: 700;
+    color: #333;
+    margin: 0 0.5rem;
+}
+
+.secondary-nav a, .secondary-nav img {
+    margin: 0 0.5rem;
+}
+
+/* ADDED: Makes the right-side nav links bold */
+.secondary-nav .nav-link {
+    font-weight: 700;
+}
+
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 90vh;
+    width: 100%;
+}
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #f5f5f5e6, #f5f5f500 40%);
+}
+.hero-content-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.hero-content {
+    max-width: 550px;
+}
+.hero-title {
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+.arrow {
+    background: none;
+    border: none;
+    color: #111010;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.left-arrow { left: 30px; }
+.right-arrow { right: 30px; }
+
+/* Custom Carousel Indicators */
+.carousel-indicators-custom {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px
+}
+.carousel-indicators-custom .indicator {
+    background-color: #ffffffb3;
+    border-radius: 5px;
+    height: 5px;
+    width: 25px;
+}
+.carousel-indicators-custom .indicator.active {
+    background-color: #fff;
+    width: 50px;
+}
+
+
+/* --- About Section --- */
+.stat-box {
+    padding: 1rem;
+}
+.stat-box h1 {
+    font-weight: 900;
+}
+.stat-box p {
+    color: #54595f;
+    font-size: 17px;
+    margin: 0;
+}
+.stat-box {
+    border-bottom: 3px solid #e8e8e8;
+}
+
+/* --- Features Section --- */
+.features-section-wrapper {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f5f5f5 50%, #fff 50%);
+}
+.side-arrow {
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;
+    z-index: 5;
+}
+.main-features-card p {
+    margin-bottom: 0;
+}
+.usp-overlap-img {
+    position: absolute;
+    right: -140px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 550px;
+}
+
+/* --- Skewed Background Sections (Careers, Sustainability) --- */
+.skew-section-wrapper {
+    overflow: hidden;
+}
+.skew-background {
+    background-color: #eb3f3f;
+    position: absolute;
+    top: 0;
+    left: -20%;
+    width: 80%;
+    height: 100%;
+    transform: skewX(-15deg);
+    z-index: 1;
+}
+.skew-content-box {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Message Section --- */
+.message-section::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 15%;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 25px solid white; /* Matches the section above */
+    z-index: 9;
+}
+
+/* --- Technology Section --- */
+.tech-skew-background {
+    background-color: #eb3f3f;
+    position: absolute;
+    top: 0;
+    right: -70%;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-15deg);
+    z-index: 1;
+}
+.tech-heading {
+    font-size: 40px;
+}
+.tech-title {
+    font-size: 30px;
+    color: #dd3232;
+}
+.nav-pills .nav-link {
+    color: #333;
+    font-weight: 700;
+}
+.nav-pills .nav-link.active {
+    background-color: transparent;
+    color: #eb3f3f;
+}
+
+/* --- Footer --- */
+footer a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+}
+footer a:hover {
+    color: #e60000;
+}
+footer h3, footer h4, footer h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Animated Explore Button --- */
+.btn.explore-button-animated,
+.btn.explore-button-animated-white {
+    background-color: #e60000;
+    color: #fff;
+    padding: 12px 35px;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    border: none;
+}
+.btn.explore-button-animated-white {
+    background-color: #fff;
+    color: #e60000;
+}
+.explore-button-animated .explore-text,
+.explore-button-animated-white .explore-text {
+    display: inline-block;
+    transition: transform .4s ease;
+}
+.explore-button-animated::before, .explore-button-animated::after,
+.explore-button-animated-white::before, .explore-button-animated-white::after {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform .4s ease;
+}
+.explore-button-animated::before, .explore-button-animated-white::before {
+    left: 15px;
+    transform: translateY(-50%) translateX(-300%);
+}
+.explore-button-animated::after, .explore-button-animated-white::after {
+    right: 15px;
+}
+.explore-button-animated:hover .explore-text,
+.explore-button-animated-white:hover .explore-text {
+    transform: translateX(15px);
+}
+.explore-button-animated:hover::before,
+.explore-button-animated-white:hover::before {
+    transform: translateY(-50%) translateX(0);
+}
+.explore-button-animated:hover::after,
+.explore-button-animated-white:hover::after {
+    transform: translateY(-50%) translateX(300%);
+}
