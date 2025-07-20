@@ -24,8 +24,10 @@
             <div class="container-fluid">
                 <!-- Logos -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="https://www.advik.co.in/wp-content/uploads/2025/04/25.svg" alt="25" height="40" class="me-2">
-                    <img src="https://www.advik.co.in/wp-content/uploads/2023/08/logo.svg" alt="Advik company logo" height="40">
+                    <img src="https://www.advik.co.in/wp-content/uploads/2025/04/25.svg" alt="25" height="40"
+                        class="me-2">
+                    <img src="https://www.advik.co.in/wp-content/uploads/2023/08/logo.svg" alt="Advik company logo"
+                        height="40">
                 </a>
                 <!-- Toggler Button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,10 +36,10 @@
                 </button>
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <!-- CHANGED: "mx-auto" is now "me-auto" to align left -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 COMPANY
                             </a>
                             <ul class="dropdown-menu">
@@ -45,7 +47,8 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 TECHNOLOGY
                             </a>
                             <ul class="dropdown-menu">
@@ -58,33 +61,67 @@
                     </ul>
                     <div class="d-flex align-items-center secondary-nav">
                         <a href="#" class="nav-link">NEWSROOM</a>
-                        <a href="#" class="nav-link">CONTACT</a>
-                        <img alt="search icon" src="public/search-icon.png" height="24">
+                        <a href="#" class="nav-link">CONTACT
+                            <img alt="search icon" src="public/search-icon.png" height="24" class="ms-2">
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- (Rest of the HTML body remains the same) -->
     <!-- Hero Section -->
-    <section class="hero-section position-relative">
-        <img class="hero-img" src="public/banner-2.jpg" alt="banner 2">
-        <div class="hero-gradient-overlay"></div>
-        <div class="hero-content-wrapper container">
-            <div class="hero-content">
-                <div class="carousel-indicators-custom">
-                    <div class="indicator"></div>
-                    <div class="indicator active"></div>
+    <section id="heroCarousel" class="hero-section carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img class="hero-img" src="public/banner-2.jpg" alt="banner 2">
+                <div class="hero-gradient-overlay"></div>
+                <div class="hero-content-wrapper container">
+                    <div class="hero-content">
+                        <div class="carousel-indicators-custom d-none d-md-flex">
+                            <div class="indicator active"></div>
+                            <div class="indicator"></div>
+                        </div>
+                        <h2 class="hero-title">Quality First: Advik Hitech's Commitment to Exceptional Manufacturing and
+                            Service</h2>
+                        <a href="#" class="btn explore-button-animated">
+                            <span class="explore-text">EXPLORE</span>
+                        </a>
+                    </div>
                 </div>
-                <h2 class="hero-title">Quality First: Advik Hitech's Commitment to Exceptional Manufacturing and Service</h2>
-                <a href="#" class="btn explore-button-animated">
-                    <span class="explore-text">EXPLORE</span>
-                </a>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img class="hero-img" src="public/banner-1.jpg" alt="banner 2 copy">
+                <div class="hero-gradient-overlay"></div>
+                <div class="hero-content-wrapper container">
+                    <div class="hero-content">
+                        <div class="carousel-indicators-custom d-none d-md-flex">
+                            <div class="indicator"></div>
+                            <div class="indicator active"></div>
+                        </div>
+                        <h2 class="hero-title">Preferred partner of the world’s largest automotive OEMs</h2>
+                        <a href="#" class="btn explore-button-animated">
+                            <span class="explore-text">EXPLORE</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="arrow left-arrow d-none d-md-block">←</button>
-        <button class="arrow right-arrow d-none d-md-block">→</button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="arrow left-arrow" aria-hidden="true">←</span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="arrow right-arrow" aria-hidden="true">→</span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </section>
 
     <!-- About Us Section -->
@@ -93,7 +130,10 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-5">
                     <h1>ABOUT US</h1>
-                    <p class="lead">ADVIK Hi-Tech Private Limited (ADVIK) is India’s leading manufacturer of precision components and systems for automotive and industrial markets worldwide. Founded in 2000, our unwavering commitment to delivering innovative, tailored solutions to complex industry challenges has made us a preferred partner to the world’s top vehicle manufacturers.</p>
+                    <p class="lead">ADVIK Hi-Tech Private Limited (ADVIK) is India’s leading manufacturer of precision
+                        components and systems for automotive and industrial markets worldwide. Founded in 2000, our
+                        unwavering commitment to delivering innovative, tailored solutions to complex industry
+                        challenges has made us a preferred partner to the world’s top vehicle manufacturers.</p>
                     <a href="#" class="btn explore-button-animated">
                         <span class="explore-text">EXPLORE</span>
                     </a>
@@ -138,23 +178,41 @@
                     <img alt="red arrow" class="side-arrow d-none d-lg-block" src="public/arrow.png">
                     <div class="card main-features-card shadow-lg p-4 p-md-5">
                         <div class="card-body">
-                             <h1 class="mb-4">FEATURES & USP</h1>
-                             <div class="row g-4">
-                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="time" src="public/shoter_time_icon.svg" width="50"><p>Shorter development leadtime</p></div>
-                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="Agile" src="public/features/Agile-flexible-process.svg" width="50"><p>Agile & flexible process</p></div>
-                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="customer" src="public/features/usp-customer.svg" width="50"><p>Customer centric mind-set</p></div>
-                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="" src="public/features/Appetite.svg" width="50"><p>Appetite to execute customer demands</p></div>
-                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="" src="public/features/Achieving.svg" width="50"><p>Achieving cost efficiency</p></div>
-                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="" src="public/features/Operate.svg" width="50"><p>Operate at economies of scale</p></div>
-                             </div>
+                            <h1 class="mb-4">FEATURES & USP</h1>
+                            <div class="row g-4">
+                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="time"
+                                        src="public/shoter_time_icon.svg" width="50">
+                                    <p>Shorter development leadtime</p>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="Agile"
+                                        src="public/features/Agile-flexible-process.svg" width="50">
+                                    <p>Agile & flexible process</p>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt="customer"
+                                        src="public/features/usp-customer.svg" width="50">
+                                    <p>Customer centric mind-set</p>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt=""
+                                        src="public/features/Appetite.svg" width="50">
+                                    <p>Appetite to execute customer demands for changing volume</p>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt=""
+                                        src="public/features/Achieving.svg" width="50">
+                                    <p>Achieving cost efficiency by balancing capital & labour</p>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center gap-3"><img alt=""
+                                        src="public/features/Operate.svg" width="50">
+                                    <p>Operate at economies of scale to meet customer challenges</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                     <img alt="machine" class="usp-overlap-img d-none d-lg-block" src="public/home_usp_img.svg">
+                    <img alt="machine" class="usp-overlap-img d-none d-lg-block" src="public/home_usp_img.svg">
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Careers Section -->
     <section class="skew-section-wrapper position-relative py-5">
         <div class="container position-relative" style="z-index: 2;">
@@ -162,13 +220,16 @@
                 <div class="col-lg-7">
                     <div class="skew-content-box text-white p-5">
                         <h1>CAREERS</h1>
-                        <p class="lead">At ADVIK, we build the capabilities, skills of our employees to be the leaders of tomorrow. We believe in the potential of each individual and invest in them to power the world. Here you will find the professional freedom to explore and reinvent old and explore new ideas! Join us and be part of our exciting journey to build the latest technology.</p>
+                        <p class="lead">At ADVIK, we build the capabilities, skills of our employees to be the leaders
+                            of tomorrow. We believe in the potential of each individual and invest in them to power the
+                            world. Here you will find the professional freedom to explore and reinvent old and explore
+                            new ideas! Join us and be part of our exciting journey to build the latest technology.</p>
                         <a href="#" class="btn btn-light explore-button-animated-white">
                             <span class="explore-text">OPPORTUNITIES IN ADVIK</span>
                         </a>
                     </div>
                 </div>
-                 <div class="col-lg-5 text-center text-lg-end ps-lg-4">
+                <div class="col-lg-5 text-center text-lg-end ps-lg-4">
                     <img class="img-fluid rounded shadow-lg" alt="career" src="public/career_1.jpg">
                 </div>
             </div>
@@ -188,7 +249,8 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="public/newsroom/newsroom1.jpg" class="card-img-top" alt="newsroom1">
                         <div class="card-body">
-                            <h5 class="card-title">ADVIK completes the acquisition of Germany based Powersports MTG GmbH</h5>
+                            <h5 class="card-title">ADVIK completes the acquisition of Germany based Powersports MTG GmbH
+                            </h5>
                         </div>
                         <div class="card-footer bg-white border-0">
                             <small class="text-danger fw-bold">07 January, 2025</small>
@@ -210,7 +272,8 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="public/newsroom/newsroom3.jpg" class="card-img-top" alt="newsroom3">
                         <div class="card-body">
-                            <h5 class="card-title">Auto component manufacturer ADVIK acquires assets of Li-ion battery firm Aceleron Energy</h5>
+                            <h5 class="card-title">Auto component manufacturer ADVIK acquires assets of Li-ion battery
+                                firm Aceleron Energy</h5>
                         </div>
                         <div class="card-footer bg-white border-0">
                             <small class="text-danger fw-bold">07 January, 2025</small>
@@ -220,23 +283,27 @@
             </div>
         </div>
     </section>
-    
+
     <!-- MD's Message Section -->
     <section class="message-section position-relative py-5 bg-light">
-         <div class="container">
+        <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7">
                     <img class="cotes" alt="cotes" src="public/cotes.png" width="75">
                     <h1 class="mt-3">MD's MESSAGE</h1>
-                    <p class="lead">Since our inception in 2000, we have worked with a single-minded focus to deliver world-class automotive components to our Indian and global customers. Our commitment to innovation and ability to design tailormade solutions have positioned us as the preferred supplier to leading OEMs across the world.</p>
-                    <p class="lead">Over the last few years, we have focused on amplifying our capabilities and growing our alliances to become a significant player in the global automotive supply chain network.</p>
+                    <p class="lead">Since our inception in 2000, we have worked with a single-minded focus to deliver
+                        world-class automotive components to our Indian and global customers. Our commitment to
+                        innovation and ability to design tailormade solutions have positioned us as the preferred
+                        supplier to leading OEMs across the world.</p>
+                    <p class="lead">Over the last few years, we have focused on amplifying our capabilities and growing
+                        our alliances to become a significant player in the global automotive supply chain network.</p>
                     <h4 class="mt-4 mb-0">MR. ADITYA BHARTIA</h4>
                     <p>Managing Director</p>
                     <a href="#" class="btn btn-danger explore-button-animated mt-3">
                         <span class="explore-text">EXPLORE</span>
                     </a>
                 </div>
-                 <div class="col-lg-5">
+                <div class="col-lg-5">
                     <img alt="MD Image" src="public/MDimage.png" class="img-fluid">
                 </div>
             </div>
@@ -246,9 +313,13 @@
     <!-- Group Presence Section -->
     <section class="py-5 text-center">
         <div class="container">
-             <h1>GROUP PRESENCE</h1>
-             <p class="lead col-lg-10 mx-auto">Headquartered in Pune, India, Advik serves customers worldwide from over 10 manufacturing sites based in India, Indonesia, and Vietnam. Powered by a talented team of over 4000 qualified engineers and professionals, we continue to expand our footprint with manufacturing, technical offices, sales offices, and alliances across Asia & Europe</p>
-             <img alt="group presence map" src="public/GROUP-PRESENCE3.png" class="img-fluid mt-4" style="max-width: 800px;">
+            <h1>GROUP PRESENCE</h1>
+            <p class="lead col-lg-10 mx-auto">Headquartered in Pune, India, Advik serves customers worldwide from over
+                10 manufacturing sites based in India, Indonesia, and Vietnam. Powered by a talented team of over 4000
+                qualified engineers and professionals, we continue to expand our footprint with manufacturing, technical
+                offices, sales offices, and alliances across Asia & Europe</p>
+            <img alt="group presence map" src="public/GROUP-PRESENCE3.png" class="img-fluid mt-4"
+                style="max-width: 800px;">
         </div>
     </section>
 
@@ -259,13 +330,17 @@
                 <div class="col-lg-7">
                     <div class="skew-content-box text-white p-5">
                         <h1>SUSTAINABILITY</h1>
-                        <p class="lead">We are committed to pursuing purpose-oriented and quality-driven operations to build a more sustainable, and inclusive future while unlocking new and better growth opportunities. Our continued investment on research & development and setting new benchmarks in operational excellence have enabled us to ensure efficient and resource-saving use of raw materials through improved process design.</p>
+                        <p class="lead">We are committed to pursuing purpose-oriented and quality-driven operations to
+                            build a more sustainable, and inclusive future while unlocking new and better growth
+                            opportunities. Our continued investment on research & development and setting new benchmarks
+                            in operational excellence have enabled us to ensure efficient and resource-saving use of raw
+                            materials through improved process design.</p>
                         <a href="#" class="btn btn-light explore-button-animated-white">
                             <span class="explore-text">EXPLORE</span>
                         </a>
                     </div>
                 </div>
-                 <div class="col-lg-5 text-center text-lg-end ps-lg-4">
+                <div class="col-lg-5 text-center text-lg-end ps-lg-4">
                     <img class="img-fluid rounded shadow-lg" alt="sustainability" src="public/Sustainability.jpg">
                 </div>
             </div>
@@ -275,37 +350,170 @@
 
     <!-- Technology Section -->
     <section class="tech-section-wrapper position-relative py-5 overflow-hidden bg-light">
-         <div class="container position-relative" style="z-index: 2;">
-            <ul class="nav nav-pills mb-4">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">BRAKES</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">PUMPS</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">VALVES AND ACTUATORS</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">ALTERNATE FUEL SYSTEMS</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">CAPABILITIES</a></li>
+        <div class="container position-relative" style="z-index: 2;">
+            <ul id="tech-nav" class="nav nav-pills mb-4">
+                <li class="nav-item"><a href="#" class="nav-link active" data-tech-target="#tech-brakes">BRAKES</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-tech-target="#tech-pumps">PUMPS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-tech-target="#tech-valves">VALVES AND
+                        ACTUATORS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-tech-target="#tech-fuel">ALTERNATE FUEL
+                        SYSTEMS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-tech-target="#tech-capabilities">CAPABILITIES</a>
+                </li>
             </ul>
-             <div class="row">
-                 <div class="col-lg-7">
-                     <h3 class="tech-heading">TECHNOLOGY</h3>
-                     <div class="details-box">
-                         <h5 class="tech-title">BRAKES</h5>
-                         <p class="lead">Advik is a global leader in 2W brake segment. With the acquisition of Powersports, Advik’s brakes have become synonymous to safety, reliability and performance.</p>
-                         <div class="d-flex flex-wrap gap-4 my-4">
-                             <div class="text-center">
-                                 <a href="#"><img alt="Premium bikes" src="https://www.advik.co.in/wp-content/uploads/2025/05/premium-bikes-1.jpg" class="img-fluid rounded" width="150"></a>
-                                 <a href="#" class="text-decoration-none d-block mt-2"><span>Premium bikes</span></a>
-                             </div>
-                             <div class="text-center">
-                                 <a href="#"><img alt="Two Wheelers" src="https://www.advik.co.in/wp-content/uploads/2025/05/brakes-thumb.jpg" class="img-fluid rounded" width="150"></a>
-                                 <a href="#" class="text-decoration-none d-block mt-2"><span>Two Wheelers</span></a>
-                             </div>
-                         </div>
-                         <a href="#" class="btn explore-button-animated"><span class="explore-text">EXPLORE</span></a>
-                     </div>
-                 </div>
-                 <div class="col-lg-5">
-                    <!-- Right side content can go here -->
-                 </div>
-             </div>
+
+            <div id="tech-content-container" class="position-relative">
+                <!-- Pane 1: Brakes (Original Content) -->
+                <div id="tech-brakes" class="tech-carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <h3 class="tech-heading">TECHNOLOGY</h3>
+                            <div class="details-boxs">
+                                <h5 class="tech-title">BRAKES</h5>
+                                <p class="lead">Advik is a global leader in 2W brake segment. With the acquisition of
+                                    Powersports, Advik’s brakes have become synonymous to safety, reliability and
+                                    performance.</p>
+                                <div class="d-flex flex-wrap gap-4 my-4">
+                                    <div class="text-center">
+                                        <a href="https://www.advik.co.in/technology-term/premium-bikes/"><img
+                                                alt="Premium bikes"
+                                                src="https://www.advik.co.in/wp-content/uploads/2025/05/premium-bikes-1.jpg"
+                                                class="img-fluid rounded" width="150"></a>
+                                        <a href="https://www.advik.co.in/technology-term/premium-bikes/"
+                                            class="text-decoration-none d-block mt-2"><span>Premium bikes</span></a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="https://www.advik.co.in/technology-term/two-wheelers/"><img
+                                                alt="Two Wheelers"
+                                                src="https://www.advik.co.in/wp-content/uploads/2025/05/brakes-thumb.jpg"
+                                                class="img-fluid rounded" width="150"></a>
+                                        <a href="https://www.advik.co.in/technology-term/two-wheelers/"
+                                            class="text-decoration-none d-block mt-2"><span>Two Wheelers</span></a>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn explore-button-animated"><span
+                                        class="explore-text">EXPLORE</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 2: Pumps  -->
+                <div id="tech-pumps" class="tech-carousel-item">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <h3 class="tech-heading">TECHNOLOGY</h3>
+                            <div class="details-boxs">
+                                <h5 class="tech-title">PUMPS</h5>
+                                <p class="lead">World leader in ICE and EV pumps for cooling and lubrication. In ADVIK
+                                    we build pumps tailor made to match your expectations. Our pumps ensure vehicles
+                                    meet the rigorous emission norms and offer superior performance.</p>
+                                <div class="d-flex flex-wrap gap-4 my-4">
+                                    <div class="text-center">
+                                        <a href="https://www.advik.co.in/technology-term/premium-bikes/"><img
+                                                alt="Premium bikes"
+                                                src="https://www.advik.co.in/wp-content/uploads/2023/10/Oil-Pump.jpg"
+                                                class="img-fluid rounded" width="150"></a>
+                                        <a href="https://www.advik.co.in/technology-term/oil-pump/"
+                                            class="text-decoration-none d-block mt-2"><span>Oil Pump</span></a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="https://www.advik.co.in/technology-term/two-wheelers/"><img
+                                                alt="Two Wheelers"
+                                                src="https://www.advik.co.in/wp-content/uploads/2023/10/Vaccum-Pump.jpg"
+                                                class="img-fluid rounded" width="150"></a>
+                                        <a href="https://www.advik.co.in/technology-term/water-pump/"
+                                            class="text-decoration-none d-block mt-2"><span>Water Pump</span></a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="https://www.advik.co.in/technology-term/two-wheelers/"><img
+                                                alt="Two Wheelers"
+                                                src="https://www.advik.co.in/wp-content/uploads/2023/10/Water-Pump.jpg"
+                                                class="img-fluid rounded" width="150"></a>
+                                        <a href="https://www.advik.co.in/technology-term/vacuum-pump/"
+                                            class="text-decoration-none d-block mt-2"><span>Vaccum Pump</span></a>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn explore-button-animated"><span
+                                        class="explore-text">EXPLORE</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 3: Valves (Placeholder to show sliding) -->
+                <div id="tech-valves" class="tech-carousel-item">
+                    <div class="row">
+                        <div>
+                            <h3 class="tech-heading">TECHNOLOGY</h3>
+                            <div class="details-box">
+                                <div>
+                                    <h5 class="tech-title">VALVES AND ACTUATORS</h5>
+                                    <p class="lead">We provide Valves and Actuators for a variety of sustainable
+                                        mobility
+                                        applications. Our Valves and Actuators are used in multiple applications likes
+                                        HVAC
+                                        system, emission control and e-mobility solutions to drive the future of
+                                        sustainable
+                                        mobility.</p>
+                                    <a href="#" class="btn explore-button-animated"><span
+                                            class="explore-text">EXPLORE</span></a>
+                                </div>
+                                <div>
+                                    <img
+                                        src="https://www.advik.co.in/wp-content/uploads/2023/10/Emmision-Control2.png" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--ALTERNATE FUEL SYSTEMS -->
+                <div id="tech-fuel" class="tech-carousel-item">
+                    <h3 class="tech-heading">TECHNOLOGY</h3>
+                    <div class="details-box">
+                        <div>
+                            <h5 class="tech-title">ALTERNATE FUEL SYSTEMS</h5>
+                            <p class="lead">Global emission norms are largely moving to control CO2 emission. The shift
+                                to
+                                BS6
+                                in 2020 and CAFE norm implementation in 2023 prompted Indian OEMs to provide sustainable
+                                green
+                                vehicles to its customers. As a global citizen, Advik offers a complete range of
+                                innovative
+                                emission-certified components and solutions for alternative fuel systems for passenger
+                                cars,
+                                commercial vehicles, and large-engine OE customers worldwide.</p>
+                            <a href="#" class="btn explore-button-animated"><span
+                                    class="explore-text">EXPLORE</span></a>
+                        </div>
+                        <div>
+                            <img src="https://www.advik.co.in/wp-content/uploads/2023/10/Alternate-fuel.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAPABILITIES -->
+                <div id="tech-capabilities" class="tech-carousel-item">
+                    <h3 class="tech-heading">TECHNOLOGY</h3>
+                    <div class="details-box">
+                        <div>
+                            <h5 class="tech-title">CAPABILITIES</h5>
+                            <p>With 10 state of the art manufacturing facilities consisting of in-house machining,
+                                testing
+                                and
+                                assembling ADVIK is able to meet global customer standards - fit form and function</p>
+                            <a href="#" class="btn explore-button-animated"><span
+                                    class="explore-text">EXPLORE</span></a>
+                        </div>
+                            <div>
+                                <img src="https://www.advik.co.in/wp-content/uploads/2023/10/Alternate-fuel.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="tech-skew-background"></div>
     </section>
@@ -330,7 +538,8 @@
                     <h3>INDIA</h3>
                     <h4>ADVIK HI- TECH PVT. LTD.</h4>
                     <h5>CORPORATE OFFICE</h5>
-                    <p>Survey no. 35, B - Zone, 6th & 7th Floor, Mumbai - Bangalore, Highway, Baner, Pune, Maharashtra - 411045</p>
+                    <p>Survey no. 35, B - Zone, 6th & 7th Floor, Mumbai - Bangalore, Highway, Baner, Pune, Maharashtra -
+                        411045</p>
                     <p>info@advik.co.in</p>
                 </div>
                 <div class="col-lg col-md-4 col-sm-6">
@@ -348,7 +557,7 @@
                     <h3>ADVIK TECHNOLOGIES LTD</h3>
                     <p>61 Water Street, Birmingham, B3 1HN, UK</p>
                 </div>
-                 <div class="col-lg col-md-4 col-sm-6">
+                <div class="col-lg col-md-4 col-sm-6">
                     <h3>POWERSPORTS MTG GMBH</h3>
                     <p>Ruebteile 1 <br>72574 Bad Urach<br>Germany</p>
                 </div>
@@ -360,6 +569,75 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript for Carousels -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Technology Section Carousel Logic ---
+            const techNavLinks = document.querySelectorAll('#tech-nav .nav-link');
+            const contentContainer = document.getElementById('tech-content-container');
+
+            const initialActivePane = document.querySelector('.tech-carousel-item.active');
+            if (initialActivePane) {
+                contentContainer.style.height = initialActivePane.offsetHeight + 'px';
+            }
+
+            techNavLinks.forEach((link, index) => {
+                link.addEventListener('click', function (e) {
+                    // Prevents the link from jumping to the top of the page
+                    e.preventDefault();
+
+                    if (this.classList.contains('active')) {
+                        return;
+                    }
+
+                    const currentActiveLink = document.querySelector('#tech-nav .nav-link.active');
+                    const currentActivePane = document.querySelector('.tech-carousel-item.active');
+                    const targetPaneId = this.getAttribute('data-tech-target');
+                    const nextPane = document.querySelector(targetPaneId);
+
+                    if (!nextPane || !currentActivePane) return;
+
+                    currentActiveLink.classList.remove('active');
+                    this.classList.add('active');
+
+                    const currentActiveIndex = Array.from(techNavLinks).indexOf(currentActiveLink);
+                    const direction = index > currentActiveIndex ? 'left' : 'right';
+
+                    nextPane.classList.add('active');
+                    if (direction === 'left') {
+                        nextPane.classList.add('slide-next');
+                    } else {
+                        nextPane.classList.add('slide-prev');
+                    }
+
+                    contentContainer.style.height = nextPane.offsetHeight + 'px';
+                    nextPane.offsetWidth;
+
+                    if (direction === 'left') {
+                        currentActivePane.classList.add('slide-prev');
+                        nextPane.classList.remove('slide-next');
+                    } else {
+                        currentActivePane.classList.add('slide-next');
+                        nextPane.classList.remove('slide-prev');
+                    }
+
+                    const transitionEndHandler = () => {
+                        currentActivePane.classList.remove('active', 'slide-prev', 'slide-next');
+                        currentActivePane.removeEventListener('transitionend', transitionEndHandler);
+                    };
+                    currentActivePane.addEventListener('transitionend', transitionEndHandler);
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                const activePane = document.querySelector('.tech-carousel-item.active');
+                if (activePane) {
+                    contentContainer.style.height = activePane.offsetHeight + 'px';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

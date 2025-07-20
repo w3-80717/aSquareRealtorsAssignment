@@ -24,7 +24,6 @@ p.lead {
     margin: 0 0.5rem;
 }
 
-/* ADDED: Makes the right-side nav links bold */
 .secondary-nav .nav-link {
     font-weight: 700;
 }
@@ -35,6 +34,12 @@ p.lead {
     height: 90vh;
     width: 100%;
 }
+
+.carousel-item {
+    height: 90vh;
+    position: relative; /* Crucial for content positioning */
+}
+
 .hero-img {
     position: absolute;
     inset: 0;
@@ -42,54 +47,58 @@ p.lead {
     height: 100%;
     object-fit: cover;
 }
+
 .hero-gradient-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, #f5f5f5e6, #f5f5f500 40%);
 }
+
 .hero-content-wrapper {
     position: relative;
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 .hero-content {
     max-width: 550px;
+    z-index: 2; /* Ensure content is above overlay */
 }
+
 .hero-title {
     font-size: 2.3rem;
     font-weight: 600;
 }
+
+/* Adjusting Bootstrap controls to match original design */
+.carousel-control-prev, .carousel-control-next {
+    width: auto;
+    opacity: 1;
+}
+
 .arrow {
     background: none;
     border: none;
     color: #111010;
     font-size: 3rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    text-shadow: none; /* Remove default bootstrap shadow */
 }
-.left-arrow { left: 30px; }
-.right-arrow { right: 30px; }
 
-/* Custom Carousel Indicators */
-.carousel-indicators-custom {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 25px
-}
-.carousel-indicators-custom .indicator {
+/* Adjusting Bootstrap indicators */
+.carousel-indicators [data-bs-target] {
     background-color: #ffffffb3;
     border-radius: 5px;
     height: 5px;
     width: 25px;
+    border: none;
+    opacity: 1;
 }
-.carousel-indicators-custom .indicator.active {
+
+.carousel-indicators .active {
     background-color: #fff;
     width: 50px;
 }
-
 
 /* --- About Section --- */
 .stat-box {
@@ -176,6 +185,34 @@ p.lead {
     transform: skewX(-15deg);
     z-index: 1;
 }
+
+#tech-content-container {
+    overflow: hidden; /* This hides the sliding panes */
+    transition: height 0.6s ease-in-out; /* Animate height changes */
+}
+
+.tech-carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.tech-carousel-item.active {
+    position: relative; /* Let the active slide define the container height */
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+.tech-carousel-item.slide-prev {
+    transform: translateX(-100%);
+}
+.tech-carousel-item.slide-next {
+    transform: translateX(100%);
+}
+
 .tech-heading {
     font-size: 40px;
 }
@@ -187,11 +224,20 @@ p.lead {
     color: #333;
     font-weight: 700;
 }
-.nav-pills .nav-link.active {
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: transparent;
     color: #eb3f3f;
 }
 
+.details-box{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.details-box img{
+  margin-top: -60px;
+}
 /* --- Footer --- */
 footer a {
     color: #222;
