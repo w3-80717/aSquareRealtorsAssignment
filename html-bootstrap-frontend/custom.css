@@ -124,7 +124,7 @@ p.lead {
 .side-arrow {
     position: absolute;
     left: -100px;
-    top: 50%;
+    top: -20%;
     transform: translateY(-50%);
     width: 90px;
     z-index: 5;
@@ -158,6 +158,7 @@ p.lead {
 .skew-content-box {
     position: relative;
     z-index: 2;
+    left:-40px;
 }
 
 /* --- Message Section --- */
