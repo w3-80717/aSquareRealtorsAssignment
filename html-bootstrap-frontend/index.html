@@ -72,11 +72,6 @@
 
     <!-- Hero Section -->
     <section id="heroCarousel" class="hero-section carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        </div>
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
@@ -85,8 +80,10 @@
                 <div class="hero-content-wrapper container">
                     <div class="hero-content">
                         <div class="carousel-indicators-custom d-none d-md-flex">
-                            <div class="indicator active"></div>
-                            <div class="indicator"></div>
+                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+                                class="indicator active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                                class="indicator" aria-label="Slide 2"></button>
                         </div>
                         <h2 class="hero-title">Quality First: Advik Hitech's Commitment to Exceptional Manufacturing and
                             Service</h2>
@@ -103,8 +100,10 @@
                 <div class="hero-content-wrapper container">
                     <div class="hero-content">
                         <div class="carousel-indicators-custom d-none d-md-flex">
-                            <div class="indicator"></div>
-                            <div class="indicator active"></div>
+                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+                                class="indicator" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                                class="indicator active" aria-current="true" aria-label="Slide 2"></button>
                         </div>
                         <h2 class="hero-title">Preferred partner of the world’s largest automotive OEMs</h2>
                         <a href="#" class="btn explore-button-animated">
@@ -572,6 +571,59 @@
 
     <!-- Custom JavaScript for Carousels -->
     <script>
+        // --- Hero Section Custom Indicators Logic ---
+        const heroCarouselElement = document.getElementById('heroCarousel');
+
+        if (heroCarouselElement) {
+            // Function to update custom indicators based on active slide
+            const updateCustomHeroIndicators = () => {
+                // Find the carousel item that is currently active
+                const activeItem = heroCarouselElement.querySelector('.carousel-item.active');
+                // Get its index
+                const index = Array.from(heroCarouselElement.querySelectorAll('.carousel-item')).indexOf(activeItem);
+
+                // Select all custom indicator buttons within the active slide's content
+                // Note: We need to iterate through *all* slides' custom indicator sets
+                // to ensure only the one corresponding to the active slide is highlighted.
+                heroCarouselElement.querySelectorAll('.carousel-indicators-custom .indicator').forEach((indicator, i) => {
+                    // Check if this indicator button's slide index matches the currently active carousel item's index
+                    const indicatorSlideTo = parseInt(indicator.getAttribute('data-bs-slide-to'));
+                    if (indicatorSlideTo === index) {
+                        indicator.classList.add('active');
+                        indicator.setAttribute('aria-current', 'true');
+                    } else {
+                        indicator.classList.remove('active');
+                        indicator.removeAttribute('aria-current');
+                    }
+                });
+            };
+
+            // Initialize indicators on page load
+            updateCustomHeroIndicators();
+
+            // Listen for Bootstrap's 'slid.bs.carousel' event
+            heroCarouselElement.addEventListener('slid.bs.carousel', updateCustomHeroIndicators);
+
+            // --- Auto-move carousel every 3 seconds and cycle to first from the end ---
+            // Use Bootstrap's built-in interval and wrap options for normal behavior
+            bootstrap.Carousel.getOrCreateInstance(heroCarouselElement, {
+                interval: 3000, // 3 seconds
+                ride: false,    // don't auto-start, we'll start it below
+                wrap: true
+            });
+
+            // Explicitly start the carousel cycling
+            heroCarouselElement.addEventListener('mouseenter', () => {
+                bootstrap.Carousel.getOrCreateInstance(heroCarouselElement).pause();
+            });
+            heroCarouselElement.addEventListener('mouseleave', () => {
+                bootstrap.Carousel.getOrCreateInstance(heroCarouselElement).cycle();
+            });
+            // Start cycling on load
+            bootstrap.Carousel.getOrCreateInstance(heroCarouselElement).cycle();
+        }
+
+        // --- Technology Section Carousel Logic ---
         document.addEventListener('DOMContentLoaded', function () {
             // --- Technology Section Carousel Logic ---
             const techNavLinks = document.querySelectorAll('#tech-nav .nav-link');

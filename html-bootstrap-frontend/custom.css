@@ -85,17 +85,28 @@ p.lead {
     text-shadow: none; /* Remove default bootstrap shadow */
 }
 
-/* Adjusting Bootstrap indicators */
-.carousel-indicators [data-bs-target] {
-    background-color: #ffffffb3;
-    border-radius: 5px;
-    height: 5px;
-    width: 25px;
-    border: none;
-    opacity: 1;
+/* Custom Hero Carousel Indicators Styling */
+.hero-content .carousel-indicators-custom {
+    display: flex; /* Ensure it's a flex container */
+    gap: 10px; /* Space between indicators */
+    margin-bottom: 20px; /* Space above the title */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove list style if it somehow appears */
 }
 
-.carousel-indicators .active {
+.hero-content .carousel-indicators-custom .indicator {
+    background-color: #ffffffb3; /* Faded white */
+    border-radius: 5px;
+    height: 10px; /* Increased thickness */
+    width: 25px;
+    border: none; /* Important for button elements */
+    opacity: 1; /* Ensure visibility */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition for active state */
+    cursor: pointer; /* Indicate it's clickable */
+    padding: 0; /* Remove button padding */
+}
+
+.hero-content .carousel-indicators-custom .indicator.active {
     background-color: #fff;
     width: 50px;
 }
